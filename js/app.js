@@ -13,36 +13,14 @@ const contenedorCitas = document.querySelector('#citas')
 formCita.addEventListener('submit',nuevaCita)
 
 let editando = false ;
-eventListener()
-function eventListener(){
-    mascotaInput.addEventListener('input', datosCita  )
-    propietarioInput.addEventListener('input', datosCita  )
-    telefonoInput.addEventListener('input', datosCita  )
-    fechaInput.addEventListener('input', datosCita  )
-    horaInput.addEventListener('input', datosCita  )
-    sintomasInput.addEventListener('input', datosCita  )
-}
-
-let citaObj = {
-    mascota: '',
-    propietario: '',
-    telefono: '',
-    fecha: '',
-    hora:'',
-    sintomas: '',
-}
-
-function datosCita(e){
-    citaObj[e.target.name] = e.target.value ;
-}
 
 class Citas {
     constructor(){
         this.citas= []
+        print(this.citas)
     }
     agregarCita(cita){
         this.citas = [...this.citas , cita]
-        console.log(this.citas)
     }
     editarCita(citaeditada) {
         this.citas = this.citas.map( cita => {
@@ -82,7 +60,6 @@ class UI{
         this.clearHTML(contenedorCitas)
         citas.forEach( cita => {
             const {mascota, propietario, telefono, fecha, hora, sintomas,id} = cita
-            console.log(cita)
             const divCita = document.createElement('div')
             divCita.dataset.id = id;
 
@@ -116,7 +93,6 @@ class UI{
             const btnEditar = document.createElement('button');
 
             btnEditar.onclick = () => cargarEdicion(cita);
-            console.log(cita)
             btnEditar.classList.add('btn', 'btn-info');
             btnEditar.innerHTML = 'Editar <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>'
 
@@ -141,14 +117,31 @@ class UI{
     }
 }
 
+const citaObj = {
 
+}
 
 const administrarCitas = new Citas();
 const ui = new UI();
 
 function nuevaCita(e) {
     e.preventDefault();
-    const {mascota, propietario, telefono, fecha, hora, sintomas } = citaObj;
+
+    const mascota = mascotaInput.value;
+    const propietario = propietarioInput.value;
+    const telefono = telefonoInput.value;
+    const fecha = fechaInput.value;
+    const hora = horaInput.value;
+    const sintomas = sintomasInput.value;
+
+    citaObj.mascota = mascota;
+    citaObj.propietario = propietario;
+    citaObj.telefono = telefono;
+    citaObj.fecha = fecha
+    citaObj.hora = hora;
+    citaObj.sintomas = sintomas;
+
+
 
     if( mascota === '' || propietario === '' || telefono === '' || fecha === ''  || hora === '' || sintomas === '' ) {
         return ui.imprimirAlerta("Todos los campos son obligatorios", "error")
@@ -167,18 +160,10 @@ function nuevaCita(e) {
         ui.imprimirAlerta("Se agregó correctamente")
     }
     ui.imprimirCitas(administrarCitas)
-    reiniciarObjeto();
     formCita.reset()
 
 }
-function reiniciarObjeto(){
-    citaObj.mascota =  '',
-    citaObj.propietario =  '',
-    citaObj.telefono =  '',
-    citaObj.fecha =  '',
-    citaObj.hora = '',
-    citaObj.sintomas = ''
-}
+
 
 function eliminarCita(cita){
     administrarCitas.eliminarCita(cita)
@@ -186,19 +171,9 @@ function eliminarCita(cita){
 }
 
 function cargarEdicion(cita){
-        console.log(cita)
-        console.log("dasd")
-    const {mascota, propietario, telefono, fecha, hora, sintomas,id} = cita
-    console.log("dasd")
-    // Reiniciar el objeto
-    citaObj.mascota = mascota;
-    citaObj.propietario = propietario;
-    citaObj.telefono = telefono;
-    citaObj.fecha = fecha
-    citaObj.hora = hora;
-    citaObj.sintomas = sintomas;
-    citaObj.id = id;
+    const {mascota, propietario, telefono, fecha, hora, sintomas, id} = cita
 
+    citaObj.id = id;
     // Llenar los Inputs
     mascotaInput.value = mascota;
     propietarioInput.value = propietario;
@@ -209,5 +184,4 @@ function cargarEdicion(cita){
 
     formCita.querySelector('button[type = "submit"]').textContent = 'Guardar Cambios'
     editando = true;
-
 }

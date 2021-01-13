@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01372730-d753-41d3-8c33-a1ef7aa382f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/classes/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/classes/Citas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/classes/UI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/funciones.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/selectores.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,10 +35,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../modulos" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -31,13 +47,8 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RunManager">
-    <configuration name="AdminCitas" type="JavascriptDebugType" uri="http://localhost:63342/AdminCitas/index.html?_ijt=2u9el9oupe1kfhho16venk70r9" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,6 +73,12 @@
       <workItem from="1608144706784" duration="888000" />
       <workItem from="1608162683442" duration="16553000" />
       <workItem from="1608219776194" duration="12308000" />
+      <workItem from="1610431778159" duration="79000" />
+      <workItem from="1610466876084" duration="613000" />
+      <workItem from="1610471023059" duration="2111000" />
+      <workItem from="1610476525697" duration="29876000" />
+      <workItem from="1610565169499" duration="58000" />
+      <workItem from="1610565666438" duration="87000" />
     </task>
     <servers />
   </component>
@@ -78,5 +95,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
